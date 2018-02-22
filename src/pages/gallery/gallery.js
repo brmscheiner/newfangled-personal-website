@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 class Gallery extends Component {
@@ -7,7 +8,7 @@ class Gallery extends Component {
   };
 
   render() {
-    const { sources } = this.props;
+    const { sources, title } = this.props;
 
     const nodes = _.map(sources, (source) => {
       const imageLoading = sources.indexOf(source) === this.state.imagesLoaded;
@@ -31,10 +32,20 @@ class Gallery extends Component {
 
     return (
       <div className="Gallery">
-        <span className="giant white">{ this.props.title }</span>
+        <span className="giant white">{ title }</span>
         { nodes }
       </div>);
   }
 }
+
+Gallery.defaultProps = {
+  title: null,
+};
+
+Gallery.propTypes = {
+  onChangePage: PropTypes.func.isRequired,
+  sources: PropTypes.arrayOf(PropTypes.string).isRequired,
+  title: PropTypes.string,
+};
 
 export default Gallery;

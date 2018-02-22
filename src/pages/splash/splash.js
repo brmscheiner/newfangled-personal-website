@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Splash(props) {
   return (
@@ -18,5 +19,9 @@ function Splash(props) {
     </div>
   );
 }
+
+Splash.propTypes = {
+  onChangePage: PropTypes.func.isRequired,
+};
 
 export default Splash;
