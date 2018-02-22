@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
+import pageMap from './pages/pageMap';
 import './App.css';
 
 class App extends Component {
+  state = {
+    page: 'SPLASH'
+  };
+
+  changePage = (page) => { this.setState({ page }); };
+
   render() {
+    const pageObject = pageMap[this.state.page];
+
     return (
-      <div className="Hero">
-        <header className="App-header">
-          <span className="neon-yellow">BEN SCHEINER</span>
-        </header>
-        <p className="App-intro">
-          <span className="giant white link">WORK</span>
-          <span className="giant red link">PLAY</span>
-        </p>
-      </div>
+      <pageObject.component
+        onChangePage={this.changePage}
+        {...pageObject.props}
+      />
     );
   }
 }

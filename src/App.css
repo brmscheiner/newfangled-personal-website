@@ -12,6 +12,15 @@
   justify-content: space-around;
 }
 
+.Gallery-image {
+  width: 100%;
+}
+
+.Gallery-image-container {
+  width: 100%;
+  margin-bottom: 4em;
+}
+
 .neon-yellow {
   padding: 3px;
   color: #FFEB3B;
