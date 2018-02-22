@@ -12,13 +12,22 @@
   justify-content: space-around;
 }
 
+.Gallery {
+  text-align: center;
+}
+
 .Gallery-image {
-  width: 100%;
+  height: 150vh;
+  padding: 20px;
 }
 
 .Gallery-image-container {
-  width: 100%;
-  margin-bottom: 4em;
+  height: 150vh;
+  margin: 0 0 4em 3vh;
+}
+
+.bordered {
+  border: 1px solid white;
 }
 
 .neon-yellow {

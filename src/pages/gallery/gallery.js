@@ -9,25 +9,31 @@ class Gallery extends Component {
   render() {
     const { sources } = this.props;
 
-    console.log(sources);
-    console.log(this.state);
+    const nodes = _.map(sources, (source) => {
+      const imageLoading = sources.indexOf(source) === this.state.imagesLoaded;
+      const borderClass = imageLoading ? '' : 'bordered';
+      const imageClasses = `Gallery-image ${borderClass}`;
+      return (
+        sources.indexOf(source) <= this.state.imagesLoaded &&
+        <div
+          key={source}
+          className="Gallery-image-container"
+        >
+          <img
+            src={source}
+            onLoad={() => { this.setState({ imagesLoaded: this.state.imagesLoaded + 1 }); } }
+            className={imageClasses}
+            alt={source}
+          />
+        </div>
+      )
+    });
 
-    const nodes = _.map(sources, (source) => (
-      sources.indexOf(source) >= this.state.imagesLoaded &&
-      <div
-        key={source}
-        className="Gallery-image-container"
-      >
-        <img
-          src={source}
-          onLoad={() => { this.setState({ imagesLoaded: this.state.imagesLoaded + 1 }); } }
-          className="Gallery-image"
-          alt={source}
-        />
-      </div>
-    ));
-
-    return <div>{ nodes }</div>
+    return (
+      <div className="Gallery">
+        <span className="giant white">{ this.props.title }</span>
+        { nodes }
+      </div>);
   }
 }
 
