@@ -17,12 +17,11 @@
 }
 
 .Gallery-image {
-  height: 150vh;
+  height: 90vh;
   padding: 20px;
 }
 
 .Gallery-image-container {
-  height: 150vh;
   margin: 0 0 4em 3vh;
 }
 

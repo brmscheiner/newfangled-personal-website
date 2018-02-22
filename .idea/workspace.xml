@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c8efedf-daac-4114-a897-66ec6b1f3ea3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
-      <change beforePath="$PROJECT_DIR$/src/images/coastlines/1.jpg" afterPath="$PROJECT_DIR$/src/images/coastlines/1.jpg" />
-      <change beforePath="$PROJECT_DIR$/src/images/coastlines/2.jpg" afterPath="$PROJECT_DIR$/src/images/coastlines/2.jpg" />
-      <change beforePath="$PROJECT_DIR$/src/pages/gallery/gallery.js" afterPath="$PROJECT_DIR$/src/pages/gallery/gallery.js" />
-      <change beforePath="$PROJECT_DIR$/src/pages/pageMap.js" afterPath="$PROJECT_DIR$/src/pages/pageMap.js" />
-      <change beforePath="$PROJECT_DIR$/src/pages/splash/splash.js" afterPath="$PROJECT_DIR$/src/pages/splash/splash.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -91,8 +85,8 @@
       <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            <state relative-caret-position="285">
+              <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -521,8 +515,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        <state relative-caret-position="285">
+          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
       </provider>
