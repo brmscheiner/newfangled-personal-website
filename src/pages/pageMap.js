@@ -1,5 +1,6 @@
 import splash from './splash/splash'
 import gallery from './gallery/gallery'
+import MPVitae from './mp/MPVitae'
 import coastlines_1 from '../images/coastlines/1.jpg'
 import coastlines_2 from '../images/coastlines/2.jpg'
 import coastlines_3 from '../images/coastlines/3.jpg'
@@ -33,5 +34,9 @@ export default {
       ],
       title: 'COASTLINES',
     }
+  },
+  MP: {
+    component: MPVitae,
+    props: {}
   }
 };

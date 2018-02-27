@@ -25,6 +25,32 @@
   margin: 0 0 4em 3vh;
 }
 
+.MPVitae-container {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+}
+
+.MPVitae-mainbar {
+  width: 60%;
+  max-width: 30em;
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+}
+
+.MPVitae-sidebar {
+  width: 40%;
+}
+
+.MPVitae-sidebar-image {
+  width: 100%;
+}
+
+.Header-image {
+  width: 40%;
+}
+
 .bordered {
   border: 1px solid white;
 }
@@ -70,5 +96,5 @@
 }
 
 body {
-  background-color: black;
+  background-color: #121314;
 }

@@ -9,6 +9,7 @@ function Splash(props) {
       </header>
       <p className="App-intro">
         <span
+          onClick={() => props.onChangePage('MP')}
           className="giant white link"
         >WORK</span>
         <span
