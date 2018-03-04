@@ -1,3 +1,45 @@
+@media (max-width: 600px) {
+  .App-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .MPVitae-sidebar {
+    opacity: 0.6;
+  }
+
+  .MPVitae-mainbar {
+    width: 60%;
+    max-width: 30em;
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    position: absolute;
+    bottom: -24em;
+  }
+}
+
+@media (min-width: 600px) {
+  .App-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .MPVitae-sidebar {
+    width: 40%;
+  }
+
+  .MPVitae-mainbar {
+    width: 60%;
+    max-width: 30em;
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+  }
+}
+
 .Hero {
   text-align: center;
   position: absolute;
@@ -29,18 +71,6 @@
   display: flex;
   justify-content: left;
   flex-direction: row;
-}
-
-.MPVitae-mainbar {
-  width: 60%;
-  max-width: 30em;
-  display: flex;
-  flex-direction: column;
-  padding: 3em;
-}
-
-.MPVitae-sidebar {
-  width: 40%;
 }
 
 .MPVitae-sidebar-image {

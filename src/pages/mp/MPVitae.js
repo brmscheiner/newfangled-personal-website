@@ -36,7 +36,7 @@ function MPVitae(props) {
         </p>
         <p className="white">
           Key skills: React, Redux, Electron, THREE.js, D3.js
-        </p>
+        </p>  
       </div>
     </div>
   );
