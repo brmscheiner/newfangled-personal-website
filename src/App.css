@@ -81,6 +81,10 @@
   flex-direction: row;
 }
 
+.MPVitae-sidebar {
+  background: #1D1D1D;
+}
+
 .MPVitae-sidebar-image {
   width: 100%;
 }
@@ -144,4 +148,8 @@
 
 .no-underline {
   text-decoration: none;
+}
+
+a {
+  color: white;
 }

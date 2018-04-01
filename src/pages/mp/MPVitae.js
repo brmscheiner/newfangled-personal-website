@@ -40,7 +40,11 @@ function MPVitae(props) {
         </p>
         <p className="white">
           Key skills: React, Redux, Electron, THREE.js, D3.js
-        </p>  
+        </p>
+        <p className="white">
+          If you are curious about my earlier work experience,
+          take a look at my <a href="#">resume</a>.
+        </p>
       </div>
     </div>
   );
