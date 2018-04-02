@@ -16,7 +16,7 @@
     flex-direction: column;
     padding: 3em;
     position: absolute;
-    bottom: -24em;
+    bottom: -58em;
   }
 
   body {
@@ -148,8 +148,4 @@
 
 .no-underline {
   text-decoration: none;
-}
-
-a {
-  color: white;
 }

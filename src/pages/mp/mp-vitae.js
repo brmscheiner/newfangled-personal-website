@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import KiraProfile from '../../images/mp/kira-left-banner.jpg';
 import RehearseScreen from '../../images/mp/mpstudio-rehearse.png'
 import PerformScreen from '../../images/mp/mpstudio-perform.png'
+import resume from '../../files/ben_scheiner_resume.pdf';
 
-function MPVitae(props) {
+function MpVitae() {
   return (
     <div className="MPVitae-container">
       <div className="MPVitae-sidebar">
@@ -43,15 +43,11 @@ function MPVitae(props) {
         </p>
         <p className="white">
           If you are curious about my earlier work experience,
-          take a look at my <a href="#">resume</a>.
+          take a look at my <a href={resume}>resume</a>.
         </p>
       </div>
     </div>
   );
 }
 
-MPVitae.propTypes = {
-  onChangePage: PropTypes.func.isRequired,
-};
-
-export default MPVitae;
+export default MpVitae;

@@ -43,7 +43,6 @@ Gallery.defaultProps = {
 };
 
 Gallery.propTypes = {
-  onChangePage: PropTypes.func.isRequired,
   sources: PropTypes.arrayOf(PropTypes.string).isRequired,
   title: PropTypes.string,
 };

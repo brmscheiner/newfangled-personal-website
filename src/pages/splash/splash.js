@@ -1,28 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-function Splash(props) {
+function Splash() {
   return (
     <div className="Hero">
       <header className="App-header">
         <span className="neon-yellow">BEN SCHEINER</span>
       </header>
       <p className="App-intro">
-        <span
-          onClick={() => props.onChangePage('MP')}
-          className="giant white link"
-        >WORK</span>
-        <span
-          onClick={() => props.onChangePage('COASTLINES')}
-          className="giant red link"
-        >PLAY</span>
+        <span className="giant white link">
+          <Link to="/work">WORK</Link>
+        </span>
+        <span className="giant red link">
+          <Link to="/play">PLAY</Link>
+        </span>
       </p>
     </div>
   );
 }
-
-Splash.propTypes = {
-  onChangePage: PropTypes.func.isRequired,
-};
 
 export default Splash;

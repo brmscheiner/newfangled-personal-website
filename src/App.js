@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
-import pageMap from './pages/pageMap';
+import { Route } from 'react-router-dom';
+import MPVitae from './pages/mp/mp-vitae'
+import splash from './pages/splash/splash'
+import Coastlines from './pages/galleries/coastlines'
+
 import './App.css';
 
 class App extends Component {
-  state = {
-    page: 'SPLASH'
-  };
-
-  changePage = (page) => { this.setState({ page }); };
-
   render() {
-    const pageObject = pageMap[this.state.page];
-
     return (
-      <pageObject.component
-        onChangePage={this.changePage}
-        {...pageObject.props}
-      />
+      <div>
+        <Route exact path="/" component={splash} />
+        <Route path="/work" component={MPVitae} />
+        <Route path="/play" component={Coastlines} />
+      </div>
     );
   }
 }
