@@ -8,12 +8,8 @@ function Splash() {
         <span className="neon-yellow">BEN SCHEINER</span>
       </header>
       <p className="App-intro">
-        <span className="giant white link">
-          <Link to="/work">WORK</Link>
-        </span>
-        <span className="giant red link">
-          <Link to="/play">PLAY</Link>
-        </span>
+        <Link className="giant white link" to="/work">WORK</Link>
+        <Link className="giant red link" to="/play">PLAY</Link>
       </p>
     </div>
   );

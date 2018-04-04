@@ -106,6 +106,10 @@
   margin-top: 2em;
 }
 
+.space-below {
+  margin-bottom: 2em;
+}
+
 .neon-yellow {
   padding: 3px;
   color: #FFEB3B;
@@ -130,6 +134,10 @@
   transition: color 4s;
 }
 
+.centered {
+  margin: 1em auto;
+}
+
 .blue {
   color: #006989;
 }
@@ -148,4 +156,7 @@
 
 .no-underline {
   text-decoration: none;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active {
 }
