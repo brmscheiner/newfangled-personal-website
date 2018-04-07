@@ -102,6 +102,16 @@
   padding: 1em;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-spaced {
+  display: flex;
+  justify-content: space-around;
+}
+
 .space-above {
   margin-top: 2em;
 }
@@ -110,10 +120,27 @@
   margin-bottom: 2em;
 }
 
-.neon-yellow {
+.less-space-around {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.space-around {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.padding-below {
+  padding-below: 2em;
+}
+
+.neon {
   padding: 3px;
-  color: #FFEB3B;
   border: 1px solid #FFEB3B;
+}
+
+.yellow {
+  color: #FFEB3B;
 }
 
 .big {

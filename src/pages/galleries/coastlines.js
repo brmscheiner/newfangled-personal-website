@@ -1,5 +1,6 @@
 import React from 'react';
 import Gallery from './gallery';
+import Breadcrumbs from '../common/breadcrumbs';
 import coastlines_1 from '../../images/coastlines/1.jpg'
 import coastlines_2 from '../../images/coastlines/2.jpg'
 import coastlines_3 from '../../images/coastlines/3.jpg'
@@ -25,5 +26,21 @@ export default function Coastlines() {
     coastlines_10
   ];
 
-  return <Gallery sources={sources} title="COASTLINES" />;
+  const crumbs = [
+    {
+      label: 'HOME',
+      href: '/',
+    },
+    {
+      label: 'PLAY',
+      href: '#',
+    }
+  ];
+
+  return (
+    <React.Fragment>
+      <Gallery sources={sources} title="COASTLINES" />
+      <Breadcrumbs crumbs={crumbs} containerClasses="flex-center space-below" />
+    </React.Fragment>
+  );
 }
