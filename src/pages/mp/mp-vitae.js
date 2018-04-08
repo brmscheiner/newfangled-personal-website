@@ -1,5 +1,6 @@
 import React from 'react';
 import Breadcrumbs from '../common/breadcrumbs';
+import NeonSign from '../common/neonSign';
 import KiraProfile from '../../images/mp/kira-left-banner.jpg';
 import RehearseScreen from '../../images/mp/mpstudio-rehearse.png'
 import PerformScreen from '../../images/mp/mpstudio-perform.png'
@@ -31,16 +32,40 @@ function MpVitae() {
             MOTORIZED PRECISION
           </h3></a>
           <p className="flex-spaced">
-            <span className="neon yellow">ROBOTICS</span>
-            <span className="neon yellow">REACT</span>
-            <span className="neon yellow">REDUX</span>
-            <span className="neon yellow">ELECTRON</span>
-            <span className="neon yellow">THREE.JS</span>
-            <span className="neon yellow">D3.JS</span>
+            <NeonSign text="ROBOTICS" />
+            <NeonSign
+              color="deepskyblue"
+              onClick={() => { window.location = 'https://reactjs.org/'}}
+              text="REACT"
+              title="https://reactjs.org/"
+            />
+            <NeonSign
+              color="deeppink"
+              onClick={() => { window.location = 'https://redux.js.org/'}}
+              text="REDUX"
+              title="https://redux.js.org/"
+            />
+            <NeonSign
+              onClick={() => { window.location = 'https://electronjs.org/'}}
+              text="ELECTRON"
+              title="https://electronjs.org/"
+            />
+            <NeonSign
+              color="lawngreen"
+              onClick={() => { window.location = 'https://threejs.org/'}}
+              text="THREE.JS"
+              title="https://threejs.org/"
+            />
+            <NeonSign
+              color="deepskyblue"
+              onClick={() => { window.location = 'https://d3js.org/'}}
+              text="D3"
+              title="https://d3js.org/"
+            />
           </p>
           <p style={{color: '#ffffff'}}>
-            Lead a small team of developers working on MP Studio, a desktop application for motion control cinematography.
-            MP Studio brings our company's 6-axis robots to life.
+            I lead a small team of developers working on MP Studio, a desktop application for motion control cinematography.
+            MP Studio brings Motorized Precision's 6-axis robots to life.
           </p>
           <p className="white centered">
             The MP Studio Rehearsal Screen
