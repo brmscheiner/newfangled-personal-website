@@ -15,6 +15,10 @@ function MpVitae() {
     {
       label: 'WORK',
       href: '#',
+    },
+    {
+      label: 'PLAY',
+      href: '/play',
     }
   ];
 
@@ -64,7 +68,7 @@ function MpVitae() {
             />
           </p>
           <p style={{color: '#ffffff'}}>
-            I lead a small team of developers working on MP Studio, a desktop application for motion control cinematography.
+            I lead a small team in the development of MP Studio, a desktop application for motion control cinematography.
             MP Studio brings Motorized Precision's 6-axis robots to life.
           </p>
           <p className="white centered">

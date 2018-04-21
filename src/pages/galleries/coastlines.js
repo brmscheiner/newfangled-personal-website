@@ -32,6 +32,10 @@ export default function Coastlines() {
       href: '/',
     },
     {
+      label: 'WORK',
+      href: '/WORK',
+    },
+    {
       label: 'PLAY',
       href: '#',
     }
