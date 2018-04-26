@@ -75,6 +75,22 @@
   margin: 0 0 4em 3vh;
 }
 
+.Gallery-thumbnail {
+  height: 60vh;
+  padding: 20px 20px 0px 20px;
+}
+
+.Gallery-thumbnail-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 4em 3vh;
+}
+
+.Play-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
 .MPVitae-container {
   display: flex;
   justify-content: left;
@@ -155,6 +171,10 @@
 
 .centered {
   margin: 1em auto;
+}
+
+.centered-text {
+  text-align: center;
 }
 
 .blue {

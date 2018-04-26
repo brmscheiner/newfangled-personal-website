@@ -6,22 +6,22 @@ import RehearseScreen from '../../images/mp/mpstudio-rehearse.png'
 import PerformScreen from '../../images/mp/mpstudio-perform.png'
 import resume from '../../files/ben_scheiner_resume.pdf';
 
-function MpVitae() {
-  const crumbs = [
-    {
-      label: 'HOME',
-      href: '/',
-    },
-    {
-      label: 'WORK',
-      href: '#',
-    },
-    {
-      label: 'PLAY',
-      href: '/play',
-    }
-  ];
+const crumbs = [
+  {
+    label: 'HOME',
+    href: '/',
+  },
+  {
+    label: 'WORK',
+    href: '#',
+  },
+  {
+    label: 'PLAY',
+    href: '/play',
+  }
+];
 
+function MpVitae() {
   return (
     <React.Fragment>
       <div className="MPVitae-container">
@@ -89,8 +89,7 @@ function MpVitae() {
           </div>
 
           <p className="white">
-            Here is my <a className="white" href={resume}>resume</a> and
-            my <a className="white" href="https://github.com/brmscheiner">Github</a> profile.
+            Here is my <a className="white" href={resume}>resume</a> with contact information.
             If you want to work together, don't hesitate to reach out!
           </p>
 
