@@ -7,6 +7,8 @@ export default function NeonSign(props) {
     border: '1px solid '.concat(props.color),
     color: props.color,
     cursor: props.onClick ? 'pointer' : 'default',
+    marginTop: 3,
+    marginBottom: 3,
   };
 
   return (
