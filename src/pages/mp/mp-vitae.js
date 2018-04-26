@@ -51,17 +51,17 @@ function MpVitae() {
             />
             <NeonSign
               onClick={() => { window.location = 'https://electronjs.org/'}}
+              color="lawngreen"
               text="ELECTRON"
               title="https://electronjs.org/"
             />
             <NeonSign
-              color="lawngreen"
               onClick={() => { window.location = 'https://threejs.org/'}}
+              color="deepskyblue"
               text="THREE.JS"
               title="https://threejs.org/"
             />
             <NeonSign
-              color="deepskyblue"
               onClick={() => { window.location = 'https://d3js.org/'}}
               text="D3"
               title="https://d3js.org/"

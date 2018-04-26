@@ -1,4 +1,17 @@
 @media (max-width: 600px) {
+  .Gallery-title {
+    font-size: 3em;
+  }
+
+  .Gallery-image {
+    padding: 20px;
+    width: 70vw;
+  }
+
+  .Gallery-image-container {
+    margin: 0 auto 4em auto;
+  }
+
   .App-intro {
     display: flex;
     flex-direction: column;
@@ -25,6 +38,19 @@
 }
 
 @media (min-width: 600px) {
+  .Gallery-title {
+    font-size: 7em;
+  }
+
+  .Gallery-image {
+    height: 90vh;
+    padding: 20px;
+  }
+
+  .Gallery-image-container {
+    margin: 0 0 4em 3vh;
+  }
+
   .App-intro {
     display: flex;
     flex-direction: row;
@@ -48,6 +74,10 @@
   }
 }
 
+.Gallery {
+  text-align: center;
+}
+
 .Hero {
   text-align: center;
   position: absolute;
@@ -60,19 +90,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-
-.Gallery {
-  text-align: center;
-}
-
-.Gallery-image {
-  height: 90vh;
-  padding: 20px;
-}
-
-.Gallery-image-container {
-  margin: 0 0 4em 3vh;
 }
 
 .Gallery-thumbnail {

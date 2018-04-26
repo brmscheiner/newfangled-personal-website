@@ -32,7 +32,7 @@ class Gallery extends Component {
 
     return (
       <div className="Gallery">
-        <span className="giant white">{ title }</span>
+        <span className="white Gallery-title">{ title }</span>
         { nodes }
       </div>);
   }

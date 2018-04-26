@@ -1,7 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
 import Breadcrumbs from '../common/breadcrumbs';
-import { Link } from 'react-router-dom';
 import NeonSign from '../common/neonSign';
 import cuba_1 from '../../images/cuba/1.jpg'
 import coastlines_1 from '../../images/coastlines/1.jpg'
