@@ -89,7 +89,8 @@ function MpVitae() {
           </div>
 
           <p className="white">
-            Here is my <a className="white" href={resume}>resume</a> with contact information.
+            Here is my <a className="white" href={resume}>resume</a> and
+            my <a className="white" href="https://github.com/brmscheiner">Github</a> profile.
             If you want to work together, don't hesitate to reach out!
           </p>
 
