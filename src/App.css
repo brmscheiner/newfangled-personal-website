@@ -154,6 +154,10 @@
   margin-bottom: 2em;
 }
 
+.more-space-below {
+  margin-bottom: 4em;
+}
+
 .less-space-around {
   margin-left: 1em;
   margin-right: 1em;
@@ -166,6 +170,10 @@
 
 .padding-below {
   padding-below: 2em;
+}
+
+.small {
+  font-size: 0.9em;
 }
 
 .big {
@@ -192,6 +200,12 @@
 
 .centered-text {
   text-align: center;
+}
+
+.clickable {
+  background: #2f2f2f;
+  padding: 10px;
+  border-radius: 3px;
 }
 
 .blue {
