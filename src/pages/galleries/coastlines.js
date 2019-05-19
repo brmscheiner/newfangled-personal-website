@@ -1,16 +1,16 @@
 import React from 'react';
 import Gallery from './gallery';
 import Breadcrumbs from '../common/breadcrumbs';
-import coastlines_1 from '../../images/coastlines/1.jpg'
-import coastlines_2 from '../../images/coastlines/2.jpg'
-import coastlines_3 from '../../images/coastlines/3.jpg'
-import coastlines_4 from '../../images/coastlines/4.jpg'
-import coastlines_5 from '../../images/coastlines/5.jpg'
-import coastlines_6 from '../../images/coastlines/6.jpg'
-import coastlines_7 from '../../images/coastlines/7.jpg'
-import coastlines_8 from '../../images/coastlines/8.jpg'
-import coastlines_9 from '../../images/coastlines/9.jpg'
-import coastlines_10 from '../../images/coastlines/10.jpg'
+import coastlines_1 from '../../public/images/coastlines/1.jpg'
+import coastlines_2 from '../../public/images/coastlines/2.jpg'
+import coastlines_3 from '../../public/images/coastlines/3.jpg'
+import coastlines_4 from '../../public/images/coastlines/4.jpg'
+import coastlines_5 from '../../public/images/coastlines/5.jpg'
+import coastlines_6 from '../../public/images/coastlines/6.jpg'
+import coastlines_7 from '../../public/images/coastlines/7.jpg'
+import coastlines_8 from '../../public/images/coastlines/8.jpg'
+import coastlines_9 from '../../public/images/coastlines/9.jpg'
+import coastlines_10 from '../../public/images/coastlines/10.jpg'
 
 export default function Coastlines() {
   const sources = [

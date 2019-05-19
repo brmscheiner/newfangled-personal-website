@@ -1,10 +1,10 @@
 import React from 'react';
 import Breadcrumbs from '../common/breadcrumbs';
 import NeonSign from '../common/neonSign';
-import KiraProfile from '../../images/mp/kira-left-banner.jpg';
-import RehearseScreen from '../../images/mp/mpstudio-rehearse.png'
-import PerformScreen from '../../images/mp/mpstudio-perform.png'
-import resume from '../../files/ben_scheiner_resume.pdf';
+import KiraProfile from '../../public/images/mp/kira-left-banner.jpg';
+import RehearseScreen from '../../public/images/mp/mpstudio-rehearse.png'
+import PerformScreen from '../../public/images/mp/mpstudio-perform.png'
+import resume from '../../public/files/ben_scheiner_resume.pdf';
 
 const crumbs = [
   {
