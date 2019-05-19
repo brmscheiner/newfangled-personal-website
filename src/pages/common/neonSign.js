@@ -8,16 +8,12 @@ export default function NeonSign(props) {
     color: props.color,
     cursor: props.onClick ? 'pointer' : 'default',
     marginTop: 3,
-    marginBottom: 3,
+    marginBottom: 3
   };
 
   return (
-    <span
-      style={style}
-      onClick={props.onClick}
-      title={props.title}
-    >
-      { props.text }
+    <span style={style} onClick={props.onClick} title={props.title}>
+      {props.text}
     </span>
   );
 }
@@ -25,12 +21,12 @@ export default function NeonSign(props) {
 NeonSign.defaultProps = {
   color: '#FFEB3B',
   onClick: null,
-  title: null,
+  title: null
 };
 
 NeonSign.propTypes = {
   color: PropTypes.string,
   onClick: PropTypes.func,
   text: PropTypes.string.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.string
 };

@@ -1,4 +1,3 @@
-
 html {
   height: 100%;
 }
@@ -46,7 +45,7 @@ body {
   }
 
   body {
-    background-color: #1D1D1D;
+    background-color: #1d1d1d;
   }
 }
 
@@ -128,7 +127,7 @@ body {
 }
 
 .MPVitae-sidebar {
-  background: #1D1D1D;
+  background: #1d1d1d;
 }
 
 .MPVitae-sidebar-image {
@@ -241,5 +240,10 @@ body {
   text-decoration: none;
 }
 
-a, a:link, a:visited, a:focus, a:hover, a:active {
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
 }
