@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import NeonSign from '../common/neonSign';
+import NeonSign from '../../components/NeonSign';
 import Backsplash from './Backsplash';
 
 class Splash extends Component {

@@ -1,25 +1,10 @@
 import React from 'react';
-import Breadcrumbs from '../common/breadcrumbs';
-import NeonSign from '../common/neonSign';
+import BreadCrumbs from '../../components/BreadCrumbs';
+import NeonSign from '../../components/NeonSign';
 import KiraProfile from '../../public/images/mp/kira-left-banner.jpg';
 import RehearseScreen from '../../public/images/mp/mpstudio-rehearse.png';
 import PerformScreen from '../../public/images/mp/mpstudio-perform.png';
 import resume from '../../public/files/ben_scheiner_resume.pdf';
-
-const crumbs = [
-  {
-    label: 'HOME',
-    href: '/'
-  },
-  {
-    label: 'WORK',
-    href: '#'
-  },
-  {
-    label: 'PLAY',
-    href: '/play'
-  }
-];
 
 function MpVitae() {
   return (
@@ -76,9 +61,9 @@ function MpVitae() {
             />
           </p>
           <p style={{ color: '#ffffff' }}>
-            I lead a small team in the development of MP Studio, a desktop
+            At MP I led a small team in developing MP Studio, a desktop
             application for motion control cinematography. MP Studio brings
-            Motorized Precision's 6-axis robots to life.
+            6-axis robots to life in synchronization with lights, cameras, and more.
           </p>
           <p className="white centered">The MP Studio Rehearsal Screen</p>
           <a href={RehearseScreen}>
@@ -115,8 +100,7 @@ function MpVitae() {
             hesitate to reach out!
           </p>
 
-          <Breadcrumbs
-            crumbs={crumbs}
+          <BreadCrumbs
             containerClasses="flex-center space-above"
           />
         </div>

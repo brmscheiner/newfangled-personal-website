@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import MPVitae from './pages/mp/mp-vitae';
+import MPVitae from './pages/work/mp-vitae';
 import splash from './pages/splash/splash';
 import Play from './pages/play/play';
 import Coastlines from './pages/galleries/coastlines';

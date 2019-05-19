@@ -1,24 +1,24 @@
-import React from 'react';
-import _ from 'lodash';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import NeonSign from '../../components/NeonSign';
-import cuba_1 from '../../public/images/cuba/1.jpg';
-import coastlines_1 from '../../public/images/coastlines/1.jpg';
+import React from "react";
+import _ from "lodash";
+import BreadCrumbs from "./BreadCrumbs";
+import NeonSign from "./NeonSign";
+import cuba_1 from "../public/images/cuba/1.jpg";
+import coastlines_1 from "../public/images/coastlines/1.jpg";
 
 const galleries = [
   {
     image: cuba_1,
-    href: '/cuba',
-    description: 'CUBA'
+    href: "/cuba",
+    description: "CUBA"
   },
   {
     image: coastlines_1,
-    href: '/coastlines',
-    description: 'COASTLINES'
+    href: "/coastlines",
+    description: "COASTLINES"
   }
 ];
 
-function Play() {
+function CardPage() {
   const galleryLinks = _.map(galleries, gallery => {
     const imageClasses = `Gallery-thumbnail`;
     return (
@@ -46,7 +46,7 @@ function Play() {
       <div className="flex-spaced">{galleryLinks}</div>
 
       <p className="small white centered-text more-space-below">
-        This site was written in React. The source code is{' '}
+        This site was written in React. The source code is{" "}
         <a
           className="white"
           href="https://github.com/brmscheiner/newfangled-personal-website"
@@ -56,11 +56,9 @@ function Play() {
         .
       </p>
 
-      <BreadCrumbs
-        containerClasses="flex-center space-above space-below"
-      />
+      <BreadCrumbs containerClasses="flex-center space-above space-below" />
     </div>
   );
 }
 
-export default Play;
+export default CardPage;
