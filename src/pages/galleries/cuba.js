@@ -32,9 +32,9 @@ export default function CubaGallery() {
   ];
 
   return (
-    <React.Fragment>
+    <>
       <Gallery sources={sources} title="CUBA" />
       <Breadcrumbs crumbs={crumbs} containerClasses="flex-center space-below" />
-    </React.Fragment>
+    </>
   );
 }

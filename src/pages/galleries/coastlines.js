@@ -42,9 +42,9 @@ export default function Coastlines() {
   ];
 
   return (
-    <React.Fragment>
+    <>
       <Gallery sources={sources} title="COASTLINES" />
       <Breadcrumbs crumbs={crumbs} containerClasses="flex-center space-below" />
-    </React.Fragment>
+    </>
   );
 }

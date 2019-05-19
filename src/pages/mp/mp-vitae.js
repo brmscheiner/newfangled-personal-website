@@ -23,7 +23,7 @@ const crumbs = [
 
 function MpVitae() {
   return (
-    <React.Fragment>
+    <>
       <div className="MPVitae-container">
         <div className="MPVitae-sidebar">
           <img src={KiraProfile} className="MPVitae-sidebar-image"/>
@@ -96,7 +96,7 @@ function MpVitae() {
           <Breadcrumbs crumbs={crumbs}  containerClasses="flex-center space-above" />
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 
