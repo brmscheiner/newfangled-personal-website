@@ -2,18 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function NeonSign(props) {
+  const { children, color, onClick, title } = props
+
   const style = {
     padding: 3,
-    border: '1px solid '.concat(props.color),
-    color: props.color,
-    cursor: props.onClick ? 'pointer' : 'default',
-    marginTop: 3,
-    marginBottom: 3
+    border: '1px solid '.concat(color),
+    color: color,
+    cursor: onClick ? 'pointer' : 'default',
+    margin: 2,
+    textTransform: 'uppercase'
   };
 
   return (
-    <span style={style} onClick={props.onClick} title={props.title}>
-      {props.text}
+    <span style={style} onClick={onClick} title={title}>
+      {children}
     </span>
   );
 }
@@ -27,6 +29,5 @@ NeonSign.defaultProps = {
 NeonSign.propTypes = {
   color: PropTypes.string,
   onClick: PropTypes.func,
-  text: PropTypes.string.isRequired,
   title: PropTypes.string
 };

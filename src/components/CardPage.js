@@ -40,7 +40,7 @@ function CardPage() {
   return (
     <div className="Play-container">
       <div className="centered-text space-below space-above">
-        <NeonSign text="AMATEUR PHOTOGRAPHY" />
+        <NeonSign>Amateur Photography</NeonSign>
       </div>
 
       <div className="flex-spaced">{galleryLinks}</div>

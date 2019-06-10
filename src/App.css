@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  background-color: #1d1d1d;
   height: 100%;
 }
 
@@ -44,9 +45,6 @@ body {
     bottom: -58em;
   }
 
-  body {
-    background-color: #1d1d1d;
-  }
 }
 
 @media (min-width: 600px) {
@@ -79,10 +77,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 3em;
-  }
-
-  body {
-    background-color: #121314;
   }
 }
 

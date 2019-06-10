@@ -20,16 +20,14 @@ const crumbs = [
 export default function BreadCrumbs(props) {
   return (
     <div className={props.containerClasses}>
-      {_.map(crumbs, (crumb, i) => {
-        return (
-          <Fragment key={crumb.label}>
-            {i !== 0 && <span className="white less-space-around">•</span>}
-            <a className="white no-underline padding-below" href={crumb.href}>
-              {crumb.label}
-            </a>
-          </Fragment>
-        );
-      })}
+      {_.map(crumbs, (crumb, i) => (
+        <Fragment key={crumb.label}>
+          {i !== 0 && <span className="white less-space-around">•</span>}
+          <a className="white no-underline padding-below" href={crumb.href}>
+            {crumb.label}
+          </a>
+        </Fragment>
+      ))}
     </div>
   );
 }

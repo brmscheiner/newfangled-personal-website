@@ -23,7 +23,7 @@ class Splash extends Component {
         <Backsplash width={width} height={height} />
         <div className="Hero">
           <header className="App-header">
-            <NeonSign color="yellow" text="BEN SCHEINER" />
+            <NeonSign color="yellow">Ben Scheiner</NeonSign>
           </header>
           <p className="App-intro">
             <Link className="giant white link no-underline" to="/work">

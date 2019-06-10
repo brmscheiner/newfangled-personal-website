@@ -6,7 +6,7 @@ import RehearseScreen from '../../public/images/mp/mpstudio-rehearse.png';
 import PerformScreen from '../../public/images/mp/mpstudio-perform.png';
 import resume from '../../public/files/ben_scheiner_resume.pdf';
 
-function MpVitae() {
+function Motorized() {
   return (
     <>
       <div className="MPVitae-container">
@@ -19,46 +19,41 @@ function MpVitae() {
             <h3 className="red">MOTORIZED PRECISION</h3>
           </a>
           <p className="flex-spaced">
-            <NeonSign text="ROBOTICS" />
+            <NeonSign>Robotics</NeonSign>
             <NeonSign
               color="deepskyblue"
               onClick={() => {
                 window.location = 'https://reactjs.org/';
               }}
-              text="REACT"
               title="https://reactjs.org/"
-            />
+            >React</NeonSign>
             <NeonSign
               color="deeppink"
               onClick={() => {
                 window.location = 'https://redux.js.org/';
               }}
-              text="REDUX"
               title="https://redux.js.org/"
-            />
+            >Redux</NeonSign>
             <NeonSign
               onClick={() => {
                 window.location = 'https://electronjs.org/';
               }}
               color="lawngreen"
-              text="ELECTRON"
               title="https://electronjs.org/"
-            />
+            >Electron</NeonSign>
             <NeonSign
               onClick={() => {
                 window.location = 'https://threejs.org/';
               }}
               color="deepskyblue"
-              text="THREE.JS"
               title="https://threejs.org/"
-            />
+            >three.js</NeonSign>
             <NeonSign
               onClick={() => {
                 window.location = 'https://d3js.org/';
               }}
-              text="D3"
               title="https://d3js.org/"
-            />
+            >d3.js</NeonSign>
           </p>
           <p style={{ color: '#ffffff' }}>
             At MP I led a small team in developing MP Studio, a desktop
@@ -109,4 +104,4 @@ function MpVitae() {
   );
 }
 
-export default MpVitae;
+export default Motorized;
