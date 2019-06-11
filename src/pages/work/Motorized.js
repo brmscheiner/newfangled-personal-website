@@ -1,17 +1,20 @@
-import React from 'react';
-import BreadCrumbs from '../../components/BreadCrumbs';
-import NeonSign from '../../components/NeonSign';
-import KiraProfile from '../../public/images/mp/kira-left-banner.jpg';
-import RehearseScreen from '../../public/images/mp/mpstudio-rehearse.png';
-import PerformScreen from '../../public/images/mp/mpstudio-perform.png';
-import resume from '../../public/files/ben_scheiner_resume.pdf';
+import React from "react";
+import BreadCrumbs from "../../components/BreadCrumbs";
+import NeonSign from "../../components/NeonSign";
+import KiraProfile from "../../public/images/mp/kira-left-banner.jpg";
+import RehearseScreen from "../../public/images/mp/mpstudio-rehearse.png";
+import PerformScreen from "../../public/images/mp/mpstudio-perform.png";
 
 function Motorized() {
   return (
     <>
       <div className="MPVitae-container">
         <div className="MPVitae-sidebar">
-          <img src={KiraProfile} className="MPVitae-sidebar-image" />
+          <img
+            src={KiraProfile}
+            className="MPVitae-sidebar-image"
+            alt="motorized-sidebar"
+          />
         </div>
         <div className="MPVitae-mainbar">
           <h2 className="white">Lead Software Engineer</h2>
@@ -23,48 +26,60 @@ function Motorized() {
             <NeonSign
               color="deepskyblue"
               onClick={() => {
-                window.location = 'https://reactjs.org/';
+                window.location = "https://reactjs.org/";
               }}
               title="https://reactjs.org/"
-            >React</NeonSign>
+            >
+              React
+            </NeonSign>
             <NeonSign
               color="deeppink"
               onClick={() => {
-                window.location = 'https://redux.js.org/';
+                window.location = "https://redux.js.org/";
               }}
               title="https://redux.js.org/"
-            >Redux</NeonSign>
+            >
+              Redux
+            </NeonSign>
             <NeonSign
               onClick={() => {
-                window.location = 'https://electronjs.org/';
+                window.location = "https://electronjs.org/";
               }}
               color="lawngreen"
               title="https://electronjs.org/"
-            >Electron</NeonSign>
+            >
+              Electron
+            </NeonSign>
             <NeonSign
               onClick={() => {
-                window.location = 'https://threejs.org/';
+                window.location = "https://threejs.org/";
               }}
               color="deepskyblue"
               title="https://threejs.org/"
-            >three.js</NeonSign>
+            >
+              three.js
+            </NeonSign>
             <NeonSign
               onClick={() => {
-                window.location = 'https://d3js.org/';
+                window.location = "https://d3js.org/";
               }}
               title="https://d3js.org/"
-            >d3.js</NeonSign>
+            >
+              d3.js
+            </NeonSign>
           </p>
-          <p style={{ color: '#ffffff' }}>
+          <p style={{ color: "#ffffff" }}>
             At MP I led a small team in developing MP Studio, a desktop
             application for motion control cinematography. MP Studio brings
-            6-axis robots to life in synchronization with lights, cameras, and more.
+            6-axis robots to life in synchronization with lights, cameras, and
+            more.
           </p>
           <p className="white centered">The MP Studio Rehearsal Screen</p>
           <a href={RehearseScreen}>
             <img
               src={RehearseScreen}
               className="bordered inline-img space-below"
+              alt="mpstudio-rehearse-screen"
             />
           </a>
           <p className="white centered">The MP Studio Perform Screen</p>
@@ -72,6 +87,7 @@ function Motorized() {
             <img
               src={PerformScreen}
               className="bordered inline-img space-below"
+              alt="mpstudio-perform-screen"
             />
           </a>
           <p className="white centered">A Review of Motorized Precision</p>
@@ -83,21 +99,13 @@ function Motorized() {
               frameBorder="0"
               allow="autoplay; encrypted-media"
               allowFullScreen
+              title="motorized-review"
             />
           </div>
 
-          <p className="white">
-            Here is my{' '}
-            <a className="white" href={resume}>
-              resume
-            </a>{' '}
-            with contact information. If you want to work together, don't
-            hesitate to reach out!
-          </p>
 
-          <BreadCrumbs
-            containerClasses="flex-center space-above"
-          />
+
+          <BreadCrumbs containerClasses="flex-center space-above" />
         </div>
       </div>
     </>
