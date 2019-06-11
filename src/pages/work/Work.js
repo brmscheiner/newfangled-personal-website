@@ -47,7 +47,7 @@ const items = [
     image: mp,
     areaStyles: {
       background:
-        "linear-gradient(90deg, rgba(93,93,93,1) 0%, rgba(0,0,0,1) 100%)"
+        "linear-gradient(90deg, rgba(93,93,93,1) 0%, rgba(45,45,45,1) 100%)"
     }
   },
   {
@@ -121,7 +121,8 @@ class Work extends Component {
                     alt={item.name}
                     style={{
                       height: blockHeight * 0.7,
-                      width: blockHeight * 0.7
+                      width: blockHeight * 0.7,
+                      margin: 20
                     }}
                   />
                   <div
@@ -144,7 +145,7 @@ class Work extends Component {
                         fontSize: 20,
                         display: "flex",
                         flexDirection: "column",
-                        paddingLeft: 30,
+                        padding: '0 10px 0 30px',
                         borderLeft: "4px solid white",
                         lineHeight: "30px"
                       }}
@@ -170,7 +171,7 @@ class Work extends Component {
               {item.footer && (
                 <div
                   style={{
-                    margin: 40,
+                    margin: '40px 0',
                     display: "flex",
                     justifyContent: "center",
                     width: "100%"
