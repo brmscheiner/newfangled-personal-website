@@ -12,14 +12,13 @@ class Splash extends Component {
   registerContainer = div => {
     if (!div || !div.getBoundingClientRect) return;
     const { width, height } = div.getBoundingClientRect();
-    console.log('setstate!', { width, height });
     this.setState({ width, height });
   };
 
   render() {
     const { width, height } = this.state;
     return (
-      <div ref={this.registerContainer} style={{ height: '100%' }}>
+      <div ref={this.registerContainer} style={{ height: '100%', cursor: 'none' }}>
         <Backsplash width={width} height={height} />
         <div className="Hero">
           <header className="App-header">

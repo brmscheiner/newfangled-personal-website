@@ -1,24 +1,36 @@
-import React, { Component } from 'react';
-import chroma from 'chroma-js';
-import { delay, last } from 'lodash';
-import randomSeed from '../../utils/randomSeed';
+import React, { Component } from "react";
+import chroma from "chroma-js";
+import { delay, last } from "lodash";
+import randomSeed from "../../utils/randomSeed";
 
-const getHairLength = i => 50 + 50 * randomSeed(i);
+const radius = 50;
+const hairs = 500;
+const hairLength = 10;
+const wobbleSegments = 4;
 const getWobble = () => Date.now() % 4;
 
-function drawHair(ctx, color, wobble, startX, y) {
-  const length = getHairLength();
-  ctx.strokeStyle = color;
+function drawHair(ctx, x1, y1, x2, y2) {
+  const wobble = getWobble();
+
+  ctx.strokeStyle = chroma.random().brighten().alpha(0.3);
   ctx.strokeWidth = 0.5;
   ctx.beginPath();
-  ctx.moveTo(startX, y);
-  ctx.quadraticCurveTo(
-    startX + 0.25 * length,
-    y - wobble,
-    startX + 0.5 * length,
-    y
-  );
-  ctx.quadraticCurveTo(startX + 0.75 * length, y + wobble, startX + length, y);
+  let currentX = x1;
+  let currentY = y1;
+  for (let i = 1; i < wobbleSegments; i += 1) {
+    ctx.moveTo(currentX, currentY);
+    const segmentLength = hairLength / wobbleSegments;
+    const r = i * segmentLength;
+    const xEnd = r * x1 + (1 - r) * x2;
+    const yEnd = r * y1 + (1 - r) * y2;
+    const xCP = 0.5 * (currentX + xEnd) + wobble;
+    const yCP = 0.5 * (currentX + xEnd) + wobble;
+
+    ctx.quadraticCurveTo(xCP, yCP, xEnd, yEnd);
+
+    currentX = xEnd;
+    currentY = yEnd;
+  }
   ctx.stroke();
 }
 
@@ -28,13 +40,16 @@ export default class Backsplash extends Component {
   ctx = null;
   frames = 0;
   anchors = [];
+  x = null;
+  y = null;
 
-  registerCanvas = canvas => {
-    if (canvas && canvas.getContext) {
-      this.canvas = canvas;
-      this.ctx = canvas.getContext('2d');
-    }
-  };
+  componentDidMount() {
+    window.addEventListener("mousemove", this.onMouseMove);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("mousemove", this.onMouseMove);
+  }
 
   componentDidUpdate() {
     const { width, height } = this.props;
@@ -46,22 +61,30 @@ export default class Backsplash extends Component {
     }
   }
 
+  onMouseMove = e => {
+    this.x = e.clientX;
+    this.y = e.clientY;
+  };
+
+  registerCanvas = canvas => {
+    if (canvas && canvas.getContext) {
+      this.canvas = canvas;
+      this.ctx = canvas.getContext("2d");
+    }
+  };
+
   draw = () => {
     const { width, height } = this.props;
-    const colorScale = chroma.scale(['#e9872f', '#8F5B2A']);
     this.ctx.clearRect(0, 0, width, height);
 
-    this.anchors = this.anchors.map(anchor => anchor + 1);
-    if (last(this.anchors) > 90) this.anchors.push(0);
-
-    this.anchors.forEach(anchor => {
-      let wobble = Math.random() * 8;
-      for (let i = 0; i < height; i += 5) {
-        wobble += 0.2 * (Math.random() - 0.5);
-        const color = colorScale(5 * wobble + i / height).hex();
-        drawHair(this.ctx, color, wobble, anchor - getHairLength(i), i);
-      }
-    });
+    const angleDifference = (2 * Math.PI) / hairs;
+    for (let i = 0; i < hairs; i += 1) {
+      const x1 = radius * Math.sin(i * angleDifference) + this.x;
+      const x2 = (radius + hairLength) * Math.sin(i * angleDifference) + this.x;
+      const y1 = radius * Math.cos(i * angleDifference) + this.y;
+      const y2 = (radius + hairLength) * Math.cos(i * angleDifference) + this.y;
+      drawHair(this.ctx, x1, y1, x2, y2);
+    }
 
     this.frames += 1;
     this.raf = delay(() => requestAnimationFrame(this.draw), 100);
