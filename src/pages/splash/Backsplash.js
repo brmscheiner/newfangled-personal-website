@@ -1,37 +1,12 @@
 import React, { Component } from "react";
 import chroma from "chroma-js";
-import { delay, last } from "lodash";
+import { delay, flatten, range } from "lodash";
 import randomSeed from "../../utils/randomSeed";
 
-const radius = 50;
-const hairs = 500;
-const hairLength = 10;
-const wobbleSegments = 4;
-const getWobble = () => Date.now() % 4;
+const columns = 20;
 
-function drawHair(ctx, x1, y1, x2, y2) {
-  const wobble = getWobble();
-
-  ctx.strokeStyle = chroma.random().brighten().alpha(0.3);
-  ctx.strokeWidth = 0.5;
-  ctx.beginPath();
-  let currentX = x1;
-  let currentY = y1;
-  for (let i = 1; i < wobbleSegments; i += 1) {
-    ctx.moveTo(currentX, currentY);
-    const segmentLength = hairLength / wobbleSegments;
-    const r = i * segmentLength;
-    const xEnd = r * x1 + (1 - r) * x2;
-    const yEnd = r * y1 + (1 - r) * y2;
-    const xCP = 0.5 * (currentX + xEnd) + wobble;
-    const yCP = 0.5 * (currentX + xEnd) + wobble;
-
-    ctx.quadraticCurveTo(xCP, yCP, xEnd, yEnd);
-
-    currentX = xEnd;
-    currentY = yEnd;
-  }
-  ctx.stroke();
+function getDistance(x1, y1, x2, y2) {
+  return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
 }
 
 export default class Backsplash extends Component {
@@ -39,9 +14,10 @@ export default class Backsplash extends Component {
   canvas = null;
   ctx = null;
   frames = 0;
-  anchors = [];
   x = null;
   y = null;
+  prevWidth = null;
+  prevHeight = null;
 
   componentDidMount() {
     window.addEventListener("mousemove", this.onMouseMove);
@@ -53,12 +29,26 @@ export default class Backsplash extends Component {
 
   componentDidUpdate() {
     const { width, height } = this.props;
+
+    if (width !== this.prevWidth || height !== this.prevHeight) {
+      this.size = width / columns;
+      const rows = Math.ceil(height / this.size);
+      const xValues = range(columns).map(i => 0.5 * this.size + i * this.size);
+      const grid = range(rows).map(i => {
+        const y = 0.5 * this.size + i * this.size;
+        return xValues.map(x => ({ x, y }));
+      });
+      this.grid = flatten(grid);
+    }
+
     if (!this.animating && width && height && this.ctx) {
       this.animating = true;
-      this.anchors.push(0);
 
       this.raf = requestAnimationFrame(this.draw);
     }
+
+    this.prevWidth = width;
+    this.prevHeight = height;
   }
 
   onMouseMove = e => {
@@ -77,17 +67,35 @@ export default class Backsplash extends Component {
     const { width, height } = this.props;
     this.ctx.clearRect(0, 0, width, height);
 
-    const angleDifference = (2 * Math.PI) / hairs;
-    for (let i = 0; i < hairs; i += 1) {
-      const x1 = radius * Math.sin(i * angleDifference) + this.x;
-      const x2 = (radius + hairLength) * Math.sin(i * angleDifference) + this.x;
-      const y1 = radius * Math.cos(i * angleDifference) + this.y;
-      const y2 = (radius + hairLength) * Math.cos(i * angleDifference) + this.y;
-      drawHair(this.ctx, x1, y1, x2, y2);
+    if (this.grid && this.x && this.y) {
+      this.drawGrid();
     }
 
     this.frames += 1;
     this.raf = delay(() => requestAnimationFrame(this.draw), 100);
+  };
+
+  drawGrid = () => {
+    const { width, height } = this.props;
+    const colorScale = chroma.scale(['#a6bddb', '#74a9cf', '#3690c0', '#0570b0', '#034e7b']);
+    const maxDistance = getDistance(0, 0, 0.5 * width, 0.5 * height);
+    const coloredGrid = this.grid.map(({ x, y }) => {
+      const distance = getDistance(x, y, this.x, this.y);
+      const color = colorScale(distance / maxDistance).darken(3).alpha(0.2).hex();
+      return { x, y, color };
+    });
+
+    coloredGrid.forEach(({ x, y, color }) => {
+      this.ctx.beginPath();
+      this.ctx.fillStyle = color;
+      this.ctx.rect(
+        x - 0.5 * this.size,
+        y - 0.5 * this.size,
+        x + 0.5 * this.size,
+        y + 0.5 * this.size
+      );
+      this.ctx.fill();
+    });
   };
 
   render() {
