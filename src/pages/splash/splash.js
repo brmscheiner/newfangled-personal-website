@@ -18,7 +18,7 @@ class Splash extends Component {
   render() {
     const { width, height } = this.state;
     return (
-      <div ref={this.registerContainer} style={{ height: '100%', cursor: 'none' }}>
+      <div ref={this.registerContainer} style={{ height: '100%' }}>
         <Backsplash width={width} height={height} />
         <div className="Hero">
           <header className="App-header">

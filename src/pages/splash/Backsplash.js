@@ -3,10 +3,72 @@ import chroma from "chroma-js";
 import { delay, flatten, range } from "lodash";
 import randomSeed from "../../utils/randomSeed";
 
-const columns = 20;
+const columns = 50;
 
 function getDistance(x1, y1, x2, y2) {
   return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+}
+
+function getDecimals(n) {
+  const decimals = Math.abs(n - Math.floor(n));
+  const strings = decimals
+    .toString()
+    .slice(2)
+    .split("");
+  return strings.map(s => parseInt(s));
+}
+
+function colorByDistance(grid, mouseX, mouseY, width, height) {
+  const colorScale = chroma.scale([
+    "#74a9cf",
+    "#3690c0",
+    "#0570b0",
+    "#034e7b",
+    "black"
+  ]);
+
+  const maxDistance = getDistance(0, 0, width, height);
+  return grid.map(({ x, y }) => {
+    const distance = getDistance(x, y, mouseX, mouseY);
+    const color = colorScale(distance / maxDistance)
+      .darken(2.5)
+      .alpha(0.3)
+      .hex();
+    return { x, y, color };
+  });
+}
+
+function colorByDistanceRemainder(grid, mouseX, mouseY) {
+  return grid.map(({ x, y }) => {
+    const distance = getDistance(x, y, mouseX, mouseY);
+    const decimals = getDecimals(distance);
+    const color = chroma.gl(
+      decimals[0] / 10,
+      decimals[1] / 10,
+      decimals[2] / 10,
+      0.05
+    );
+    return { x, y, color };
+  });
+}
+
+function colorByAngle(grid, mouseX, mouseY) {
+  const colorScale = chroma.scale([
+    "#74a9cf",
+    "#3690c0",
+    "#0570b0",
+    "#034e7b",
+    "black"
+  ]);
+  
+  return grid.map(({ x, y }) => {
+    const angle = Math.tan(Math.abs(mouseX - x / mouseY - y));
+    const color = colorScale(angle / Math.PI)
+      .darken(2.5)
+      .alpha(0.3)
+      .hex();
+    return { x, y, color };
+  });
 }
 
 export default class Backsplash extends Component {
@@ -77,13 +139,8 @@ export default class Backsplash extends Component {
 
   drawGrid = () => {
     const { width, height } = this.props;
-    const colorScale = chroma.scale(['#a6bddb', '#74a9cf', '#3690c0', '#0570b0', '#034e7b']);
-    const maxDistance = getDistance(0, 0, 0.5 * width, 0.5 * height);
-    const coloredGrid = this.grid.map(({ x, y }) => {
-      const distance = getDistance(x, y, this.x, this.y);
-      const color = colorScale(distance / maxDistance).darken(3).alpha(0.2).hex();
-      return { x, y, color };
-    });
+
+    const coloredGrid = colorByAngle(this.grid, this.x, this.y, width, height);
 
     coloredGrid.forEach(({ x, y, color }) => {
       this.ctx.beginPath();
