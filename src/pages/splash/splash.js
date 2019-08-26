@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import NeonSign from '../../components/NeonSign';
-import Backsplash from './Backsplash';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import NeonSign from "../../components/NeonSign";
+import Backsplash from "./Backsplash";
 
 class Splash extends Component {
   state = {
@@ -9,16 +9,29 @@ class Splash extends Component {
     height: null
   };
 
-  registerContainer = div => {
-    if (!div || !div.getBoundingClientRect) return;
-    const { width, height } = div.getBoundingClientRect();
+  componentDidMount() {
+    window.addEventListener("resize", this.setDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.setDimensions);
+  }
+
+  setDimensions = () => {
+    if (!this.div) return;
+    const { width, height } = this.div.getBoundingClientRect();
     this.setState({ width, height });
+  };
+
+  registerContainer = div => {
+    this.div = div;
+    this.setDimensions();
   };
 
   render() {
     const { width, height } = this.state;
     return (
-      <div ref={this.registerContainer} style={{ height: '100%' }}>
+      <div ref={this.registerContainer} style={{ height: "100%" }}>
         <Backsplash width={width} height={height} />
         <div className="Hero">
           <header className="App-header">

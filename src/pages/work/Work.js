@@ -24,7 +24,7 @@ const items = [
     name: "Ubiquiti Networks",
     title: "Software Engineer",
     lines: [
-      "Product development for UniFi Network",
+      "Software development for UniFi Network",
       "Czar of Ubiquiti's shared component library",
       "Now I know more about the internet"
     ],
@@ -39,9 +39,9 @@ const items = [
     name: "Motorized Precision",
     title: "Lead Software Engineer",
     lines: [
-      "Product development for MP Studio",
-      "Controlled robots on film sets and convention floors",
-      "Occasionally operated the corporate forklift"
+      "Software development for MP Studio",
+      "Operated robots on film sets and convention floors",
+      "Occasionally worked the company forklift"
     ],
     href: "/motorized",
     image: mp,

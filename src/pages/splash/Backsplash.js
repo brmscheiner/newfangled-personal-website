@@ -20,19 +20,20 @@ function getDecimals(n) {
 
 function colorByDistance(grid, mouseX, mouseY, width, height) {
   const colorScale = chroma.scale([
+    "#C0E3FF",
     "#74a9cf",
     "#3690c0",
     "#0570b0",
     "#034e7b",
-    "black"
+    "black",
   ]);
 
   const maxDistance = getDistance(0, 0, width, height);
   return grid.map(({ x, y }) => {
     const distance = getDistance(x, y, mouseX, mouseY);
     const color = colorScale(distance / maxDistance)
-      .darken(2.5)
-      .alpha(0.3)
+      .darken(3.5)
+      .alpha(0.4)
       .hex();
     return { x, y, color };
   });
@@ -60,13 +61,27 @@ function colorByAngle(grid, mouseX, mouseY) {
     "#034e7b",
     "black"
   ]);
-  
+
   return grid.map(({ x, y }) => {
     const angle = Math.tan(Math.abs(mouseX - x / mouseY - y));
     const color = colorScale(angle / Math.PI)
       .darken(2.5)
       .alpha(0.3)
       .hex();
+    return { x, y, color };
+  });
+}
+
+function colorByAngleRemainder(grid, mouseX, mouseY) {
+  return grid.map(({ x, y }) => {
+    const angle = Math.tan(Math.abs(mouseX - x / mouseY - y));
+    const decimals = getDecimals(angle);
+    const color = chroma.gl(
+      decimals[0] / 10,
+      decimals[1] / 10,
+      decimals[2] / 10,
+      0.05
+    );
     return { x, y, color };
   });
 }
@@ -140,7 +155,13 @@ export default class Backsplash extends Component {
   drawGrid = () => {
     const { width, height } = this.props;
 
-    const coloredGrid = colorByAngle(this.grid, this.x, this.y, width, height);
+    const coloredGrid = colorByDistance(
+      this.grid,
+      this.x,
+      this.y,
+      width,
+      height
+    );
 
     coloredGrid.forEach(({ x, y, color }) => {
       this.ctx.beginPath();
