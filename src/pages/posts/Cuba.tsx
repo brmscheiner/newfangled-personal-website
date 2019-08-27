@@ -8,5 +8,5 @@ import cuba_5 from "../../public/images/cuba/5.jpg";
 
 export default function CubaGallery() {
   const sources = [cuba_1, cuba_2, cuba_3, cuba_4, cuba_5];
-  return <Gallery sources={sources} title="CUBA" />;
+  return <Gallery sources={sources} title="Vacation photos from Cuba" />;
 }

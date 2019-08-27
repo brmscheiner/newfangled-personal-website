@@ -7,7 +7,7 @@ import './App.css';
 
 export default function App() {
   return (
-    <div style={{ height: '100%' }}>
+    <div className="app">
       <Route exact path="/" component={Home} />
       <Route path="/coastlines" component={Coastlines} />
       <Route path="/cuba" component={Cuba} />

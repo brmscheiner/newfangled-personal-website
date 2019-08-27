@@ -1,45 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
+import Logo from "../components/Logo";
 
 interface GalleryProps {
   sources: string[];
   title?: string;
 }
 
-class Gallery extends Component<GalleryProps> {
-  state = {
-    imagesLoaded: 0
-  };
+// accept loquality source and hq source
+// accept comments after each image
+// logo links back to home page
+// little image clicks into big image
 
-  render() {
-    const { sources, title } = this.props;
-
-    const nodes = sources.map(source => {
-      const imageLoading = sources.indexOf(source) === this.state.imagesLoaded;
-      const borderClass = imageLoading ? "" : "bordered";
-      const imageClasses = `Gallery-image ${borderClass}`;
-      return (
-        sources.indexOf(source) <= this.state.imagesLoaded && (
-          <div key={source} className="Gallery-image-container">
-            <img
-              src={source}
-              onLoad={() => {
-                this.setState({ imagesLoaded: this.state.imagesLoaded + 1 });
-              }}
-              className={imageClasses}
-              alt={source}
-            />
-          </div>
-        )
-      );
-    });
-
+function Gallery({ sources, title }: GalleryProps) {
+  const nodes = sources.map(source => {
     return (
-      <div className="Gallery">
-        <span className="white Gallery-title">{title}</span>
-        {nodes}
+      <div key={source} className="gallery-image-container">
+        <img className="gallery-image" src={source} alt={source} />
       </div>
     );
-  }
+  });
+
+  return (
+    <div className="gallery-container">
+      <Logo className="post-logo" />
+      <span className="gallery-title">{title}</span>
+      {nodes}
+    </div>
+  );
 }
 
 export default Gallery;

@@ -25,5 +25,5 @@ export default function Coastlines() {
     coastlines_10
   ];
 
-  return <Gallery sources={sources} title="COASTLINES" />;
+  return <Gallery sources={sources} title="Looking closely at the Oregon Coast, pt. 1" />;
 }
