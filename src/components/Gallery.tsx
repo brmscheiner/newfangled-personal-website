@@ -1,21 +1,31 @@
 import React from "react";
+import { withRouter, RouteComponentProps } from "react-router-dom";
+import Button from "../components/Button";
 import Logo from "../components/Logo";
 
-interface GalleryProps {
-  sources: string[];
-  title?: string;
+interface Source {
+  lowQualityUrl: string;
+  highQualityUrl: string;
+  name: string;
+  description?: string;
 }
 
-// accept loquality source and hq source
+interface GalleryProps extends RouteComponentProps {
+  sources: Source[];
+  title?: string;
+  children?: React.ReactNode;
+}
+
 // accept comments after each image
-// logo links back to home page
 // little image clicks into big image
 
-function Gallery({ sources, title }: GalleryProps) {
+function Gallery({ children, history, sources, title }: GalleryProps) {
   const nodes = sources.map(source => {
+    const { name, lowQualityUrl, highQualityUrl, description } = source;
     return (
-      <div key={source} className="gallery-image-container">
-        <img className="gallery-image" src={source} alt={source} />
+      <div key={name} className="gallery-image-container">
+        <img className="gallery-image" src={lowQualityUrl} alt={name} />
+        {description}
       </div>
     );
   });
@@ -25,8 +35,15 @@ function Gallery({ sources, title }: GalleryProps) {
       <Logo className="post-logo" />
       <span className="gallery-title">{title}</span>
       {nodes}
+      {children}
+      <Button onClick={() => {}} variant="primary">
+        Receive Emails When I Post
+      </Button>
+      <Button onClick={() => history.push("/")} variant="secondary">
+        Return Home
+      </Button>
     </div>
   );
 }
 
-export default Gallery;
+export default withRouter(Gallery);

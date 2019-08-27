@@ -1,38 +1,26 @@
 import React from "react";
 import Logo from "../../components/Logo";
 import Stub from "../../components/Stub";
+import coastlines_3 from "../../public/images/coastlines/3.jpg";
+import cuba_1 from "../../public/images/cuba/1.jpg";
 
 export default function Home() {
   return (
     <>
       <Logo className="home-logo" />
         <Stub
-            title="Photos from Alaska"
-            teaser="What follows is a collection of photos taken on our most recent trip to Alaska. We visited many places and saw several different things even a moose but it wasnt the kind with antlers it was a lady moose."
+            to="/coastlines"
+            imageAlt="Dunes"
+            imageSrc={coastlines_3}
+            title="Looking closely at the Oregon coast, pt. 1"
+            teaser="Coastlines are textural Meccas. This photo project is my little tribute to them."
         />
         <Stub
-            title="Photos from Alaska"
-            teaser="What follows is a collection of photos taken on our most recent trip to Alaska. We visited many places and saw several different things even a moose but it wasnt the kind with antlers it was a lady moose."
-        />
-        <Stub
-            title="Photos from Alaska"
-            teaser="What follows is a collection of photos taken on our most recent trip to Alaska. We visited many places and saw several different things even a moose but it wasnt the kind with antlers it was a lady moose."
-        />
-        <Stub
-            title="Photos from Alaska"
-            teaser="What follows is a collection of photos taken on our most recent trip to Alaska. We visited many places and saw several different things even a moose but it wasnt the kind with antlers it was a lady moose."
-        />
-        <Stub
-            title="Photos from Alaska"
-            teaser="What follows is a collection of photos taken on our most recent trip to Alaska. We visited many places and saw several different things even a moose but it wasnt the kind with antlers it was a lady moose."
-        />
-        <Stub
-            title="Photos from Alaska"
-            teaser="What follows is a collection of photos taken on our most recent trip to Alaska. We visited many places and saw several different things even a moose but it wasnt the kind with antlers it was a lady moose."
-        />
-        <Stub
-            title="Photos from Alaska"
-            teaser="What follows is a collection of photos taken on our most recent trip to Alaska. We visited many places and saw several different things even a moose but it wasnt the kind with antlers it was a lady moose."
+            to="/cuba"
+            imageAlt="Cuba"
+            imageSrc={cuba_1}
+            title="Vacation in Cuba"
+            teaser="Turns out Cuba's not so hard to visit! At least that was the case in Winter 2017"
         />
     </>
   );

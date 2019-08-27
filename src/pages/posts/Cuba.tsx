@@ -6,7 +6,39 @@ import cuba_3 from "../../public/images/cuba/3.jpg";
 import cuba_4 from "../../public/images/cuba/4.jpg";
 import cuba_5 from "../../public/images/cuba/5.jpg";
 
+const sources = [
+  {
+    lowQualityUrl: cuba_1,
+    highQualityUrl: cuba_1,
+    name: "Cuba 1",
+    description: "Hiii"
+  },
+  {
+    lowQualityUrl: cuba_2,
+    highQualityUrl: cuba_2,
+    name: "Cuba 1",
+    description: "Hiii"
+  },
+  {
+    lowQualityUrl: cuba_3,
+    highQualityUrl: cuba_3,
+    name: "Cuba 1",
+    description: "Hiii"
+  },
+  {
+    lowQualityUrl: cuba_4,
+    highQualityUrl: cuba_4,
+    name: "Cuba 1",
+    description: "Hiii"
+  },
+  {
+    lowQualityUrl: cuba_5,
+    highQualityUrl: cuba_5,
+    name: "Cuba 1",
+    description: "Hiii"
+  }
+];
+
 export default function CubaGallery() {
-  const sources = [cuba_1, cuba_2, cuba_3, cuba_4, cuba_5];
   return <Gallery sources={sources} title="Vacation photos from Cuba" />;
 }
