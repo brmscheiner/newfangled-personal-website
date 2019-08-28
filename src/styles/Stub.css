@@ -1,0 +1,26 @@
+.stub {
+  width: 400px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stub-title {
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin: 50px 0 20px 0;
+  padding-bottom: 2px;
+  border-bottom: 1px solid white;
+}
+
+.stub-image {
+  cursor: pointer;
+  width: 400px;
+  max-width: 80vw;
+  margin-bottom: 30px;
+}
+
+.stub-teaser {
+  letter-spacing: 2px;
+}

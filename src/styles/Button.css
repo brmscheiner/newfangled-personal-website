@@ -1,0 +1,23 @@
+.button {
+  width: 300px;
+  padding: 12px;
+  margin-bottom: 30px;
+  color: white;
+  border: none;
+  font-family: Futura, serif;
+  font-size: 16px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.button-primary {
+  background-color: #9013fe;
+}
+
+.button-secondary {
+  background-color: #4a90e2;
+}
+
+.button-tertiary {
+  background-color: #cd0162;
+}

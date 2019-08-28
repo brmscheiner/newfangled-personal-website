@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import Home from './pages/home';
 import Coastlines from './pages/posts/Coastlines';
 import Cuba from './pages/posts/Cuba';
-import './App.css';
+import './styles/Base.css';
 
 export default function App() {
   return (

@@ -7,13 +7,13 @@ import cuba_1 from "../../public/images/cuba/1.jpg";
 export default function Home() {
   return (
     <>
-      <Logo className="home-logo" />
+      <Logo />
         <Stub
             to="/coastlines"
             imageAlt="Dunes"
             imageSrc={coastlines_3}
             title="Looking closely at the Oregon coast, pt. 1"
-            teaser="Coastlines are textural Meccas. This photo project is my little tribute to them."
+            teaser="A small series of photographs, the fruits of time spent exploring coast lines"
         />
         <Stub
             to="/cuba"

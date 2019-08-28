@@ -1,16 +1,20 @@
 import React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
+import "../styles/Logo.css";
 
 interface LogoProps
   extends React.HTMLAttributes<HTMLOrSVGElement>,
-    RouteComponentProps {}
+    RouteComponentProps {
+  small?: boolean;
+}
 
 function Logo(props: LogoProps) {
-  const { className, history } = props;
+  const { className, small, history } = props;
+  const logoClassName = small ? "logo logo-small" : "logo";
   return (
     <svg
       {...props}
-      className={`logo ${className}`}
+      className={`${logoClassName} ${className}`}
       onClick={() => history.push("/")}
       xmlns="http://www.w3.org/2000/svg"
       width="382"

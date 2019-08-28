@@ -1,0 +1,11 @@
+.logo {
+  cursor: pointer;
+  max-width: 80vw;
+}
+
+.logo-small {
+  width: 200px;
+  height: 200px;
+  max-width: 40vw;
+  margin-bottom: 50px;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import Button from "../components/Button";
 import Logo from "../components/Logo";
+import '../styles/Gallery.css'
 
 interface Source {
   lowQualityUrl: string;
@@ -32,7 +33,7 @@ function Gallery({ children, history, sources, title }: GalleryProps) {
 
   return (
     <div className="gallery-container">
-      <Logo className="post-logo" />
+      <Logo small />
       <span className="gallery-title">{title}</span>
       {nodes}
       {children}

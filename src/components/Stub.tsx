@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
+import '../styles/Stub.css'
 
 interface StubProps extends RouteComponentProps {
   title: string;

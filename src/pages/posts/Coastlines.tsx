@@ -10,7 +10,6 @@ import coastlines_8 from "../../public/images/coastlines/8.jpg";
 import coastlines_9 from "../../public/images/coastlines/9.jpg";
 import coastlines_10 from "../../public/images/coastlines/10.jpg";
 
-
 const sources = [
   {
     lowQualityUrl: coastlines_1,
