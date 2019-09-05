@@ -1,8 +1,7 @@
 import React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
-import Button from "../components/Button";
-import Logo from "../components/Logo";
-import '../styles/Gallery.css'
+import PostContainer from "../components/PostContainer";
+import "../styles/Gallery.css";
 
 interface Source {
   lowQualityUrl: string;
@@ -13,7 +12,7 @@ interface Source {
 
 interface GalleryProps extends RouteComponentProps {
   sources: Source[];
-  title?: string;
+  title: string;
   children?: React.ReactNode;
 }
 
@@ -24,26 +23,17 @@ function Gallery({ children, history, sources, title }: GalleryProps) {
   const nodes = sources.map(source => {
     const { name, lowQualityUrl, highQualityUrl, description } = source;
     return (
-      <div key={name} className="gallery-image-container">
-        <img className="gallery-image" src={lowQualityUrl} alt={name} />
-        {description}
-      </div>
+        <div key={name} className="gallery-image-container">
+          <img className="gallery-image" src={lowQualityUrl} alt={name} />
+          {description}
+        </div>
     );
   });
 
   return (
-    <div className="gallery-container">
-      <Logo small />
-      <span className="gallery-title">{title}</span>
-      {nodes}
-      {children}
-      <Button onClick={() => {}} variant="primary">
-        Receive Emails When I Post
-      </Button>
-      <Button onClick={() => history.push("/")} variant="secondary">
-        Return Home
-      </Button>
-    </div>
+      <PostContainer title={title}>
+        {nodes}
+      </PostContainer>
   );
 }
 

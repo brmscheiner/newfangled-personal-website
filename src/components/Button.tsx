@@ -3,7 +3,7 @@ import '../styles/Button.css'
 
 interface ButtonProps {
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   variant: "primary" | "secondary" | "tertiary";
 }
 

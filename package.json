@@ -8,6 +8,7 @@
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^4.3.5",
+    "@types/react-syntax-highlighter": "^10.2.1",
     "chroma-js": "^2.0.3",
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",
@@ -19,6 +20,7 @@
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "3.1.1",
+    "react-syntax-highlighter": "^11.0.2",
     "typescript": "^3.5.3"
   },
   "scripts": {

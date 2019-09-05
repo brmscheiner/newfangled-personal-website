@@ -9,11 +9,12 @@ interface LogoProps
 }
 
 function Logo(props: LogoProps) {
-  const { className, small, history } = props;
+  const { className, small, history, staticContext, ...rest } = props;
   const logoClassName = small ? "logo logo-small" : "logo";
+
   return (
     <svg
-      {...props}
+      {...rest}
       className={`${logoClassName} ${className}`}
       onClick={() => history.push("/")}
       xmlns="http://www.w3.org/2000/svg"
