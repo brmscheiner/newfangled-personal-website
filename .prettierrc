@@ -1,0 +1,17 @@
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "semi": false,
+  "useTabs": false,
+  "tabWidth": 2,
+  "printWidth": 80,
+  "overrides": [
+    {
+      "files": "*.{ts,tsx}",
+      "options": {
+        "semi": true,
+        "trailingComma": "all"
+      }
+    }
+  ]
+}

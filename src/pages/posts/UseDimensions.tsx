@@ -16,7 +16,7 @@ export default function UseDimensions() {
         resize elements of a chart in response to window resize events. In most
         cases I have found hooks to significantly reduce the complexity and
         length of my components, but in this case the reverse was true. Luckily
-        it was easy enough to build generic a hooks and reuse it. Here's the
+        it was easy enough to build a generic hook and reuse it. Here's the
         code:
       </span>
       <CodeSample>
@@ -55,15 +55,18 @@ export default function useDimensions(ref) {
       <span className="full mb-1">And here's how you would use it:</span>
       <CodeSample>
         {`import React, { useRef } from 'react';
-import { useSize } from '???';
+import { useDimensions } from '???';
 
 const ref = useRef(null);
-const { width, height } = useSize(ref);
+const { width, height } = useDimensions(ref);
+
+// attach ref to some DOM element
+return <div ref={ref} ...
 `}
       </CodeSample>
       <span className="full mb-3">
-        Hopefully this helps someone abstract away some boilerplate code
-        from their projects
+        Hopefully this helps someone out! I find this hook really useful for separating
+        boilerplate code from the "meat" of my components.
       </span>
     </PostContainer>
   );

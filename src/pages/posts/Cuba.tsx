@@ -10,32 +10,32 @@ const sources = [
   {
     lowQualityUrl: cuba_1,
     highQualityUrl: cuba_1,
-    name: "Cuba 1",
-    description: "Hiii"
+    name: "Viñales Buggy",
+    description: "A horse and buggy in Viñales"
   },
   {
     lowQualityUrl: cuba_2,
     highQualityUrl: cuba_2,
-    name: "Cuba 1",
-    description: "Hiii"
+    name: "Cloudstruck 1",
+    description: "Above and below: clouds off the coast of Cayo Jutias"
   },
   {
     lowQualityUrl: cuba_3,
     highQualityUrl: cuba_3,
-    name: "Cuba 1",
-    description: "Hiii"
+    name: "Cloudstruck 2",
+    description: ""
   },
   {
     lowQualityUrl: cuba_4,
     highQualityUrl: cuba_4,
-    name: "Cuba 1",
-    description: "Hiii"
+    name: "Valle del Silencio 1",
+    description: "Above and below: a still night in the Valle del Silencio"
   },
   {
     lowQualityUrl: cuba_5,
     highQualityUrl: cuba_5,
-    name: "Cuba 1",
-    description: "Hiii"
+    name: "Valle del Silencio 2",
+    description: ""
   }
 ];
 
