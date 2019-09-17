@@ -1,8 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Button from "../components/Button";
-import Logo from "../components/Logo";
-import "../styles/PostContainer.css";
+import React from 'react';
+import Button from '../components/Button';
+import Logo from '../components/Logo';
+import '../styles/PostContainer.css';
 
 interface PostContainerProps {
   children?: React.ReactNode;
@@ -15,11 +14,9 @@ function PostContainer({ children, title }: PostContainerProps) {
       <Logo small />
       <span className="title">{title}</span>
       {children}
-      <Button variant="primary">
-        Receive Emails When I Post
-      </Button>
-      <Button variant="secondary">
-        <Link to="/">Return Home</Link>
+      <Button variant="primary">Receive Emails When I Post</Button>
+      <Button to="/" variant="secondary">
+        Return Home
       </Button>
     </div>
   );

@@ -14,7 +14,7 @@ interface CodeProps {
 export default function CodeSample({ children }: CodeProps) {
   return (
     <SyntaxHighlighter
-      customStyle={{ fontSize: 12, width: 400, overflowY: "hidden", marginBottom: 20 }}
+      customStyle={{ fontSize: 12, width: 540, overflowY: "hidden", marginBottom: 20 }}
       language="js"
       style={shadesOfPurple}
     >

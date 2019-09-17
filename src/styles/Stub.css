@@ -1,5 +1,5 @@
 .stub {
-  width: 400px;
+  width: 600px;
   padding: 15px 20px;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
 
 .stub-image {
   cursor: pointer;
-  width: 400px;
+  width: 600px;
   max-width: 80vw;
   margin-bottom: 30px;
 }

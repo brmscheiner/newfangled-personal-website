@@ -1,6 +1,6 @@
 .button {
   width: 300px;
-  padding: 12px;
+  padding: 12px 0;
   margin-bottom: 30px;
   color: white;
   border: none;
@@ -8,6 +8,7 @@
   font-size: 16px;
   cursor: pointer;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .button-primary {
