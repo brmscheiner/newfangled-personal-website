@@ -9,7 +9,7 @@ export default [
   },
   {
     label: 'Japan',
-    value: 5,
+    value: 10,
   },
   {
     label: 'Uk',

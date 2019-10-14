@@ -25,6 +25,8 @@ export default function BarChart({ data }: BarChartProps) {
   const maxValue = Math.max(...data.map(datum => datum.value));
   const minValue = Math.min(...data.map(datum => datum.value));
 
+  console.log(minValue, maxValue)
+
   let totalUnits;
   let axisHeight;
   if (maxValue > 0 && minValue > 0) {
@@ -37,6 +39,8 @@ export default function BarChart({ data }: BarChartProps) {
     totalUnits = maxValue - minValue;
     axisHeight = yMargin;
   }
+
+  console.log(height, axisHeight)
 
   const pixelsPerUnit = totalUnits / (height - 2 * yMargin);
 
