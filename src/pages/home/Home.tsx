@@ -3,11 +3,19 @@ import Logo from '../../components/Logo';
 import Stub from '../../components/Stub';
 import coastlines_3 from '../../public/images/coastlines/3.jpg';
 import cuba_1 from '../../public/images/cuba/1.jpg';
+import squirrels from '../../public/images/squirrels/1.jpg';
 
 export default function Home() {
   return (
     <>
       <Logo />
+      <Stub
+        to="/squirrels"
+        imageAlt="Squirrels"
+        imageSrc={squirrels}
+        title="Squiggles & Penelope"
+        teaser="Dreamtime"
+      />
       <Stub
         to="/bar-chart-pt-1"
         title="You don't need d3 pt. 1: creating a bar chart with vanilla react"
