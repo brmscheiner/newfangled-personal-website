@@ -16,9 +16,6 @@ interface GalleryProps extends RouteComponentProps {
   children?: React.ReactNode;
 }
 
-// accept comments after each image
-// little image clicks into big image
-
 function Gallery({ children, history, sources, title }: GalleryProps) {
   const nodes = sources.map(source => {
     const { name, lowQualityUrl, highQualityUrl, description } = source;
@@ -33,6 +30,7 @@ function Gallery({ children, history, sources, title }: GalleryProps) {
   return (
       <PostContainer title={title}>
         {nodes}
+        {children}
       </PostContainer>
   );
 }

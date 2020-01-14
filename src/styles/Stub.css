@@ -1,23 +1,21 @@
 .stub {
-  width: 600px;
+  width: 680px;
   padding: 15px 20px;
   display: flex;
   flex-direction: column;
+  max-width: 80vw;
 }
 
 .stub-title {
   font-size: 18px;
   letter-spacing: 1px;
-  cursor: pointer;
-  margin: 50px 0 20px 0;
+  margin: 20px 0;
   padding-bottom: 2px;
   border-bottom: 1px solid white;
 }
 
 .stub-image {
-  cursor: pointer;
-  width: 600px;
-  max-width: 80vw;
+  width: 100%;
   margin-bottom: 30px;
 }
 

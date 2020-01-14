@@ -22,3 +22,11 @@
 .button-tertiary {
   background-color: #cd0162;
 }
+
+.button-teaser {
+  text-align: left;
+  padding-left: 24px;
+  background-color: #646464;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}

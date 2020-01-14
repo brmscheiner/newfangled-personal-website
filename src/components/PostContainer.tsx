@@ -14,7 +14,7 @@ function PostContainer({ children, title }: PostContainerProps) {
       <Logo small />
       <span className="title">{title}</span>
       {children}
-      <Button variant="primary">Receive Emails When I Post</Button>
+      <Button href="https://forms.gle/R1VWR8W3HYCBZCaPA" variant="primary">Receive Emails When I Post</Button>
       <Button to="/" variant="secondary">
         Return Home
       </Button>

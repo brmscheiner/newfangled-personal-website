@@ -6,7 +6,8 @@ interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   to?: string;
-  variant: 'primary' | 'secondary' | 'tertiary';
+  href?: string;
+  variant: 'primary' | 'secondary' | 'tertiary' | 'teaser';
 }
 
 export default function Button({
@@ -14,12 +15,21 @@ export default function Button({
   onClick,
   to,
   variant,
+  href,
 }: ButtonProps) {
   if (to) {
     return (
       <NavLink to={to} className={`button button-${variant}`}>
         {children}
       </NavLink>
+    );
+  }
+
+  if (href) {
+    return (
+      <button onClick={onClick} className={`button button-${variant}`}>
+        <a href={href} target="_blank">{children}</a>
+      </button>
     );
   }
 

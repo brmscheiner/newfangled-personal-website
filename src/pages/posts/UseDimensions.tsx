@@ -6,10 +6,11 @@ export default function UseDimensions() {
   return (
     <PostContainer title="Hook of the moment: useDimensions">
       <span className="full mb-2">
-        When React premiered hooks earlier this year, I was super excited to
-        stop writing class components. While the transition has been mostly
-        smooth, I was surprised to discover how involved it was to work with the
-        dimensions of a DOM node.
+        When React introduced hooks earlier this year, I was super excited to
+        stop writing class components. Over time, I noticed that
+        if a bug originated in a component, it was almost always a class component.
+        While the transition has been mostly smooth, I was surprised to discover
+        how involved it was to work with the dimensions of a DOM node.
       </span>
       <span className="full mb-1">
         Most of the time I find myself working with refs, it's because I need to

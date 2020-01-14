@@ -11,34 +11,34 @@ const sources = [
     lowQualityUrl: cuba_1,
     highQualityUrl: cuba_1,
     name: "Viñales Buggy",
-    description: "A horse and buggy in Viñales"
+    description: "Viñales"
   },
   {
     lowQualityUrl: cuba_2,
     highQualityUrl: cuba_2,
-    name: "Cloudstruck 1",
-    description: "Above and below: clouds off the coast of Cayo Jutias"
+    name: "Jutias I",
+    description: "Cayo Jutias"
   },
   {
     lowQualityUrl: cuba_3,
     highQualityUrl: cuba_3,
-    name: "Cloudstruck 2",
-    description: ""
+    name: "Jutias II",
+    description: "Cayo Jutias II"
   },
   {
     lowQualityUrl: cuba_4,
     highQualityUrl: cuba_4,
-    name: "Valle del Silencio 1",
-    description: "Above and below: a still night in the Valle del Silencio"
+    name: "Valle del Silencio",
+    description: "Valle del Silencio"
   },
   {
     lowQualityUrl: cuba_5,
     highQualityUrl: cuba_5,
-    name: "Valle del Silencio 2",
-    description: ""
+    name: "Valle del Silencio II",
+    description: "Valle del Silencio II"
   }
 ];
 
 export default function CubaGallery() {
-  return <Gallery sources={sources} title="Vacation photos from Cuba" />;
+  return <Gallery sources={sources} title="Cuba" />;
 }

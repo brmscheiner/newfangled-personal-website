@@ -1,0 +1,12 @@
+.footer {
+    position: absolute;
+    bottom: -200px;
+    left: 8px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer-link {
+    margin-left: -6px;
+    margin-bottom: 16px;
+}
