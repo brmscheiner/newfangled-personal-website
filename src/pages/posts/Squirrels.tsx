@@ -3,7 +3,6 @@ import Gallery from '../../components/Gallery';
 import squirrels_1 from '../../public/images/squirrels/1.jpg';
 import squirrels_2 from '../../public/images/squirrels/2.jpg';
 import squirrels_3 from '../../public/images/squirrels/3.jpg';
-import squirrels_4 from '../../public/images/squirrels/4.jpg';
 
 const sources = [
   {
@@ -20,11 +19,6 @@ const sources = [
     lowQualityUrl: squirrels_3,
     highQualityUrl: squirrels_3,
     name: 'Cloudstruck 2',
-  },
-  {
-    lowQualityUrl: squirrels_4,
-    highQualityUrl: squirrels_4,
-    name: 'Valle del Silencio 1',
   },
 ];
 

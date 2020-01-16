@@ -1,25 +1,17 @@
-import React from "react";
-import PostContainer from "../../components/PostContainer";
-import CodeSample from "../../components/CodeSample";
+import React from 'react';
+import PostContainer from '../../components/PostContainer';
+import CodeSample from '../../components/CodeSample';
 
 export default function UseDimensions() {
   return (
     <PostContainer title="Hook of the moment: useDimensions">
-      <span className="full mb-2">
-        When React introduced hooks earlier this year, I was super excited to
-        stop writing class components. Over time, I noticed that
-        if a bug originated in a component, it was almost always a class component.
-        While the transition has been mostly smooth, I was surprised to discover
-        how involved it was to work with the dimensions of a DOM node.
-      </span>
-      <span className="full mb-1">
-        Most of the time I find myself working with refs, it's because I need to
-        resize elements of a chart in response to window resize events. In most
-        cases I have found hooks to significantly reduce the complexity and
-        length of my components, but in this case the reverse was true. Luckily
-        it was easy enough to build a generic hook and reuse it. Here's the
-        code:
-      </span>
+      <p>
+        When React introduced hooks last year, I was excited to give them
+        a shot. So far I've been very happy with the results. While the
+        transition has been smooth overall, I was surprised to discover how
+        annoying it was to work with the dimensions of a DOM node. If you have
+        the same problem, this code snippet should save you some time.
+      </p>
       <CodeSample>
         {`import { useEffect, useState } from 'react';
 
@@ -53,7 +45,7 @@ export default function useDimensions(ref) {
   return { width, height };
 }`}
       </CodeSample>
-      <span className="full mb-1">And here's how you would use it:</span>
+      <p className="full mb-1">Sample usage:</p>
       <CodeSample>
         {`import React, { useRef } from 'react';
 import { useDimensions } from '???';
@@ -65,10 +57,7 @@ const { width, height } = useDimensions(ref);
 return <div ref={ref} ...
 `}
       </CodeSample>
-      <span className="full mb-3">
-        Hopefully this helps someone out! I find this hook really useful for separating
-        boilerplate code from the "meat" of my components.
-      </span>
+      <p>Hopefully you find this helpful! Cheers</p>
     </PostContainer>
   );
 }
