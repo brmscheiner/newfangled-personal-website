@@ -28,7 +28,9 @@ export default function Button({
   if (href) {
     return (
       <button onClick={onClick} className={`button button-${variant}`}>
-        <a href={href} target="_blank">{children}</a>
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
       </button>
     );
   }

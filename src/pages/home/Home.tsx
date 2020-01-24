@@ -14,7 +14,7 @@ export default function Home() {
         imageAlt="Squirrels"
         imageSrc={squirrels}
         title="How to raise squirrels (and what to do if you befriend one)"
-        teaser="This past fall I raised two squirrels from infancy to adolescence. Nature may one day call upon you to do the same. Are you up for the challenge?"
+        teaser="This past fall I raised two squirrels from infancy to adolescence. Nature may one day call upon you to do the same. Are you ready?"
         callToAction="See more..."
       />
       {/*<Stub*/}
